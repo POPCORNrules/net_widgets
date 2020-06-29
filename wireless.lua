@@ -5,6 +5,7 @@ local naughty       = require("naughty")
 local gears         = require("gears")
 local cairo         = require("lgi").cairo
 local module_path = (...):match ("(.+/)[^/]+$") or ""
+local theme         = beautiful.get()
 
 function dbg(message)
     naughty.notify({ preset = naughty.config.presets.normal,
