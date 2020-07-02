@@ -18,7 +18,7 @@ local function draw_signal(level)
     local img = cairo.ImageSurface.create(cairo.Format.ARGB32, 32, 32)
     local cr  = cairo.Context(img)
 
-    cr:set_source(gears.color(theme.fg_normal))
+    cr:set_source(gears.color(beautiful.fg_normal))
     if level > 75 then
         cr:arc(         32/2, 32/2, 32/2, 145*math.pi/180, 395*math.pi/180)
         cr:arc_negative(32/2, 32/2, 32/2-3, 395*math.pi/180, 145*math.pi/180)
@@ -136,7 +136,7 @@ local function worker(args)
                 "<span font_desc=\""..font.."\">"..
                 "┌["..interface.."]\n"..
                 "├ESSID:\t\t"..essid.."\n"..
-                "├IP:\t\t"..inet.."\n"..
+                "├IP:\t\t\t"..inet.."\n"..
                 "├BSSID\t\t"..mac.."\n"..
                 ""..signal..
                 "└Bit rate:\t"..bitrate.."</span>"
